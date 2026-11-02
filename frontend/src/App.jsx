@@ -11,6 +11,12 @@ import {
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 
+const S3_PREVIEW_URL =
+  "https://nepal-landcover-explorer-2026-roma.s3.ap-south-1.amazonaws.com/data/nepal_landcover_preview.png";
+
+const S3_STATISTICS_URL =
+  "https://nepal-landcover-explorer-2026-roma.s3.ap-south-1.amazonaws.com/data/landcover_statistics.csv";
+
 const landCoverBounds = [
   [26.34375, 80.03025],
   [30.416916666666665, 88.16908333333333],
@@ -83,7 +89,8 @@ function LandCoverHover({ onHover }) {
       console.error("Could not load land-cover preview.");
     };
 
-    image.src = "/data/nepal_landcover_preview.png";
+    image.crossOrigin = "anonymous";
+    image.src = S3_PREVIEW_URL;
 
     return () => {
       imageRef.current = null;
@@ -161,7 +168,7 @@ export default function App() {
    const [hoverInfo, setHoverInfo] = useState(null); 
 
   useEffect(() => {
-    fetch("/data/landcover_statistics.csv")
+    fetch(S3_STATISTICS_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Could not load land-cover statistics.");
@@ -345,12 +352,13 @@ export default function App() {
             )}
 
             {showLandCover && (
-              <ImageOverlay
-                url="/data/nepal_landcover_preview.png"
-                bounds={landCoverBounds}
-                opacity={0.78}
-                attribution="ESA WorldCover 2021"
-              />
+             <ImageOverlay
+               url={S3_PREVIEW_URL}
+               bounds={landCoverBounds}
+               opacity={0.78}
+               attribution="ESA WorldCover 2021"
+               crossOrigin="anonymous"
+             />
             )}
 
             <NepalView />
