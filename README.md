@@ -137,7 +137,8 @@ is planned for future development.
 🌐 **Live Demo:** https://charming-fairy-cae772.netlify.app/
 
 ## Application Preview
-![Uploading Screenshot 2026-11-02 at 12.07.15 PM.png…]()
+<img width="1342" height="845" alt="Screenshot 2026-11-02 at 12 07 15 PM" src="https://github.com/user-attachments/assets/e16fdd5c-816e-4a2a-80e9-624289b714bf" />
+
 
 
 ## Author
