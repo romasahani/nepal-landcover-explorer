@@ -66,9 +66,9 @@ nepal-landcover-explorer/
 │   ├── clip_nepal.py
 │   ├── create_preview.py
 │   ├── calculate_statistics.py
-│   └── inspect_rasters.py
+│   ├── inspect_rasters.py
+│   └── inspect_preview_source.py
 │
-├── inspect_preview_source.py
 ├── .gitignore
 └── README.md
 ```
