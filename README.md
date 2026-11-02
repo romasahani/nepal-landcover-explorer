@@ -126,7 +126,19 @@ The production files will be generated in `frontend/dist/`.
 
 ## Project Status
 
-The React frontend, interactive map, land-cover preview, statistics, and raster-processing workflow are implemented. Cloud integration and public deployment are planned improvements.
+The React frontend, interactive map, ESA WorldCover visualization,
+land-cover statistics, and raster-processing workflow are implemented.
+
+The application is publicly deployed on Netlify.
+
+Cloud integration with Amazon S3 and Amazon Location Service
+is planned for future development.
+
+🌐 **Live Demo:** https://charming-fairy-cae772.netlify.app/
+
+## Application Preview
+![Uploading Screenshot 2026-11-02 at 12.07.15 PM.png…]()
+
 
 ## Author
 
